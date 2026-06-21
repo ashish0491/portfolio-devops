@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ashish &mdash; DevOps Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">
+    <span class="nav-logo-icon"><i class="fas fa-terminal"></i></span>
+    Ashish<span>.dev</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#hero"    data-s="hero">   <i class="fas fa-home"></i>     Home</a></li>
+    <li><a href="#about"   data-s="about">  <i class="fas fa-user"></i>     About</a></li>
+    <li><a href="#work"    data-s="work">   <i class="fas fa-briefcase"></i>Work</a></li>
+    <li><a href="#contact" data-s="contact"><i class="fas fa-envelope"></i> Contact</a></li>
+  </ul>
+  <button class="nav-resume-btn" onclick="openResume()">
+    <i class="fas fa-file-alt"></i> Resume
+  </button>
+  <button class="nav-burger" onclick="toggleDrawer()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-drawer" id="drawer">
+    <a href="#hero"    onclick="closeDrawer()"><i class="fas fa-home"></i>     Home</a>
+    <a href="#about"   onclick="closeDrawer()"><i class="fas fa-user"></i>     About</a>
+    <a href="#work"    onclick="closeDrawer()"><i class="fas fa-briefcase"></i>Work</a>
+    <a href="#contact" onclick="closeDrawer()"><i class="fas fa-envelope"></i> Contact</a>
+    <button class="nav-drawer-resume" onclick="closeDrawer();openResume()">
+      <i class="fas fa-file-alt"></i> View Resume
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="bg-a">
+  <div class="hero-noise"></div>
+  <div class="hero-inner">
+    <div class="hero-label">
+      <span class="hero-label-dot"></span>
+      Open to opportunities
+    </div>
+    <h1 class="hero-name">Ash<span class="dim">ish</span></h1>
+    <div class="hero-role">
+      <span class="hero-role-prefix">~/&nbsp;</span>
+      <span id="typed"></span>
+      <span class="caret"></span>
+    </div>
+    <p class="hero-desc">Fresher DevOps engineer building scalable cloud infrastructure, CI/CD automation, and containerized systems &mdash; one commit at a time.</p>
+    <div class="hero-cta">
+      <a href="https://www.linkedin.com/in/ashish0491" target="_blank" class="btn btn-white">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/ashish0491" target="_blank" class="btn btn-gray">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <button class="btn btn-gray" onclick="openResume()">
+        <i class="fas fa-file-alt"></i> View Resume
+      </button>
+      <a href="mailto:aa7909227@gmail.com" class="btn btn-ghost">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <i class="fas fa-arrow-down"></i>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-b">
+  <div class="s-inner">
+    <div class="s-head fi">
+      <span class="s-label">Who I am</span>
+      <h2 class="s-title">About Me</h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="fl">
+        <div class="about-avatar">A</div>
+        <div class="about-links">
+          <a href="mailto:aa7909227@gmail.com" class="a-link" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/ashish0491" target="_blank" class="a-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/ashish0491" target="_blank" class="a-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="about-bio fr">
+        <h3>DevOps Engineer &amp; Cloud Enthusiast</h3>
+        <p>I'm Ashish, a fresher DevOps engineer and B.Tech CSE graduate from Lovely Professional University. I'm passionate about building reliable, automated cloud infrastructure and bridging the gap between development and operations.</p>
+        <p>With hands-on training from KodeKloud's DevOps Professional program and AWS Academy certifications, I've worked with Terraform &amp; Ansible for IaC, Jenkins for CI/CD pipelines, and Apache CloudStack for private cloud environments.</p>
+        <p>When I'm not writing Terraform or spinning up EC2 instances, you'll find me grinding LeetCode or exploring cloud-native tech.</p>
+        <div class="chips">
+          <span class="chip"><i class="fas fa-cloud"></i> Cloud Computing</span>
+          <span class="chip"><i class="fas fa-infinity"></i> CI/CD</span>
+          <span class="chip"><i class="fas fa-code-branch"></i> Infrastructure as Code</span>
+          <span class="chip"><i class="fab fa-docker"></i> Containers</span>
+          <span class="chip"><i class="fas fa-shield-alt"></i> Cloud Security</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK ANCHOR -->
+<div id="work"></div>
+
+<!-- SKILLS -->
+<section id="skills" class="bg-a">
+  <div class="s-inner">
+    <div class="s-head fi">
+      <span class="s-label">Tech Stack</span>
+      <h2 class="s-title">Skills &amp; Tools</h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="fi">
+      <div class="filter-row">
+        <button class="f-btn on" onclick="fsk('all',this)"><i class="fas fa-th"></i> All</button>
+        <button class="f-btn" onclick="fsk('cloud',this)"><i class="fas fa-cloud"></i> Cloud &amp; DevOps</button>
+        <button class="f-btn" onclick="fsk('lang',this)"><i class="fas fa-code"></i> Languages</button>
+        <button class="f-btn" onclick="fsk('db',this)"><i class="fas fa-database"></i> Databases</button>
+        <button class="f-btn" onclick="fsk('cs',this)"><i class="fas fa-microchip"></i> CS Fundamentals</button>
+      </div>
+      <div class="sk-grid" id="sk-grid">
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#ff9900"><i class="fab fa-aws"></i></div><div class="sk-info"><div class="sk-name">Amazon Web Services</div><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div><div class="sk-sub">EC2, S3, VPC, IAM, Lambda, CloudWatch</div></div></div>
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#0078d7"><i class="fab fa-microsoft"></i></div><div class="sk-info"><div class="sk-name">Microsoft Azure</div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div><div class="sk-sub">Azure Security, Cloud Services</div></div></div>
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#2496ed"><i class="fab fa-docker"></i></div><div class="sk-info"><div class="sk-name">Docker</div><div class="sk-bar"><div class="sk-fill" data-w="80"></div></div><div class="sk-sub">Containers, Images, Compose</div></div></div>
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#7b42bc"><i class="fas fa-layer-group"></i></div><div class="sk-info"><div class="sk-name">Terraform</div><div class="sk-bar"><div class="sk-fill" data-w="82"></div></div><div class="sk-sub">IaC, AWS Provisioning, State Management</div></div></div>
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#d24939"><i class="fas fa-rocket"></i></div><div class="sk-info"><div class="sk-name">Jenkins</div><div class="sk-bar"><div class="sk-fill" data-w="75"></div></div><div class="sk-sub">CI/CD Pipelines, Build Automation</div></div></div>
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#aaa"><i class="fas fa-cogs"></i></div><div class="sk-info"><div class="sk-name">Ansible</div><div class="sk-bar"><div class="sk-fill" data-w="72"></div></div><div class="sk-sub">Configuration Management, Playbooks</div></div></div>
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#888"><i class="fab fa-linux"></i></div><div class="sk-info"><div class="sk-name">Linux</div><div class="sk-bar"><div class="sk-fill" data-w="80"></div></div><div class="sk-sub">Shell Scripting, System Administration</div></div></div>
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#f05032"><i class="fab fa-git-alt"></i></div><div class="sk-info"><div class="sk-name">Git</div><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div><div class="sk-sub">Version Control, Branching, GitHub</div></div></div>
+        <div class="sk-card" data-c="cloud"><div class="sk-ico" style="color:#777"><i class="fas fa-network-wired"></i></div><div class="sk-info"><div class="sk-name">Apache CloudStack</div><div class="sk-bar"><div class="sk-fill" data-w="70"></div></div><div class="sk-sub">Private Cloud, VM Provisioning, KVM</div></div></div>
+        <div class="sk-card" data-c="lang"><div class="sk-ico" style="color:#00599c"><i class="fas fa-code"></i></div><div class="sk-info"><div class="sk-name">C++</div><div class="sk-bar"><div class="sk-fill" data-w="80"></div></div><div class="sk-sub">DSA, OOP, Competitive Programming</div></div></div>
+        <div class="sk-card" data-c="lang"><div class="sk-ico" style="color:#f89820"><i class="fab fa-java"></i></div><div class="sk-info"><div class="sk-name">Java</div><div class="sk-bar"><div class="sk-fill" data-w="72"></div></div><div class="sk-sub">OOP, Core Java</div></div></div>
+        <div class="sk-card" data-c="lang"><div class="sk-ico" style="color:#e34c26"><i class="fab fa-html5"></i></div><div class="sk-info"><div class="sk-name">HTML &amp; CSS</div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div><div class="sk-sub">Markup, Styling, Responsive Design</div></div></div>
+        <div class="sk-card" data-c="db"><div class="sk-ico" style="color:#00758f"><i class="fas fa-database"></i></div><div class="sk-info"><div class="sk-name">MySQL</div><div class="sk-bar"><div class="sk-fill" data-w="75"></div></div><div class="sk-sub">Relational DB, Queries, RDS</div></div></div>
+        <div class="sk-card" data-c="db"><div class="sk-ico" style="color:#4db33d"><i class="fas fa-leaf"></i></div><div class="sk-info"><div class="sk-name">MongoDB</div><div class="sk-bar"><div class="sk-fill" data-w="68"></div></div><div class="sk-sub">NoSQL, Document Store, Atlas</div></div></div>
+        <div class="sk-card" data-c="cs"><div class="sk-ico" style="color:#aaa"><i class="fas fa-sitemap"></i></div><div class="sk-info"><div class="sk-name">Data Structures &amp; Algorithms</div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div><div class="sk-sub">250+ LeetCode Problems Solved</div></div></div>
+        <div class="sk-card" data-c="cs"><div class="sk-ico" style="color:#888"><i class="fas fa-cubes"></i></div><div class="sk-info"><div class="sk-name">Object-Oriented Programming</div><div class="sk-bar"><div class="sk-fill" data-w="80"></div></div><div class="sk-sub">Inheritance, Polymorphism, Design</div></div></div>
+        <div class="sk-card" data-c="cs"><div class="sk-ico" style="color:#777"><i class="fas fa-globe"></i></div><div class="sk-info"><div class="sk-name">Computer Networks</div><div class="sk-bar"><div class="sk-fill" data-w="75"></div></div><div class="sk-sub">TCP/IP, DNS, Routing, VPC</div></div></div>
+        <div class="sk-card" data-c="cs"><div class="sk-ico" style="color:#666"><i class="fas fa-server"></i></div><div class="sk-info"><div class="sk-name">Operating Systems</div><div class="sk-bar"><div class="sk-fill" data-w="74"></div></div><div class="sk-sub">Process Mgmt, Memory, Linux Internals</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="bg-b">
+  <div class="s-inner">
+    <div class="s-head fi">
+      <span class="s-label">Work History</span>
+      <h2 class="s-title">Internship &amp; Training</h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="tl">
+      <div class="tl-item fi">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-date">Nov 2024 &mdash; Feb 2025</span>
+            <span class="tl-badge">Remote</span>
+          </div>
+          <div class="tl-role">DevOps Trainee</div>
+          <div class="tl-org"><i class="fas fa-building"></i>&nbsp; KodeKloud &mdash; DevOps Professional Training</div>
+          <ul class="tl-pts">
+            <li>Designed scalable cloud environments using Terraform &amp; Ansible, applying Infrastructure as Code best practices</li>
+            <li>Built and deployed full CI/CD pipelines using Jenkins, automating build, test, and deployment workflows end-to-end</li>
+            <li>Completed hands-on labs simulating real-world enterprise DevOps environments with Docker, AWS, and monitoring tools</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Jenkins</span>
+            <span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">CI/CD</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item fi">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-date">2023 &mdash; 2024</span>
+            <span class="tl-badge">Certification Lab</span>
+          </div>
+          <div class="tl-role">Cloud Lab Experience</div>
+          <div class="tl-org"><i class="fab fa-aws"></i>&nbsp; AWS Academy Labs</div>
+          <ul class="tl-pts">
+            <li><strong style="color:var(--gray-300)">AWS Academy Cloud Foundations Certified</strong> &mdash; EC2, Lambda, S3, EBS, VPC, IAM, CloudWatch, CloudTrail</li>
+            <li><strong style="color:var(--gray-300)">AWS Cloud Architecting Certified</strong> &mdash; Auto Scaling, Route 53, ELB, WAF, and KMS for scalable architectures</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">EC2</span><span class="tag">Lambda</span><span class="tag">S3</span>
+            <span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">Route 53</span>
+            <span class="tag">Auto Scaling</span><span class="tag">WAF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="bg-a">
+  <div class="s-inner">
+    <div class="s-head fi">
+      <span class="s-label">What I Built</span>
+      <h2 class="s-title">Projects</h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card fi">
+        <div class="proj-idx">01 / 02</div>
+        <div class="proj-title">Cloud Resource Sharing Using Apache CloudStack</div>
+        <div class="proj-when"><i class="fas fa-calendar-alt" style="font-size:0.7rem;margin-right:4px"></i>February 2025</div>
+        <ul class="proj-pts">
+          <li>Set up a private cloud environment using Apache CloudStack for sharing VMs, storage, and network resources</li>
+          <li>Configured zones, pods, clusters, and host management using KVM as the virtualization platform</li>
+          <li>Enabled multi-user access and automated resource provisioning via a web interface</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Apache CloudStack</span><span class="tag">KVM</span>
+          <span class="tag">Private Cloud</span><span class="tag">Virtualization</span><span class="tag">Linux</span>
+        </div>
+      </div>
+      <div class="proj-card fi">
+        <div class="proj-idx">02 / 02</div>
+        <div class="proj-title">Terraform &amp; Jenkins &mdash; Infrastructure as Code</div>
+        <div class="proj-when"><i class="fas fa-calendar-alt" style="font-size:0.7rem;margin-right:4px"></i>December 2024</div>
+        <ul class="proj-pts">
+          <li>Automated AWS infrastructure provisioning using Terraform with version-controlled IaC</li>
+          <li>Deployed VPC, EC2, RDS, S3, IAM roles, and Load Balancers via Terraform scripts integrated with Jenkins</li>
+          <li>Managed Terraform state using S3 backend for consistency across team deployments</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Terraform</span><span class="tag">Jenkins</span><span class="tag">AWS</span>
+          <span class="tag">VPC</span><span class="tag">EC2</span><span class="tag">RDS</span>
+          <span class="tag">S3</span><span class="tag">IaC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="bg-b">
+  <div class="s-inner">
+    <div class="s-head fi">
+      <span class="s-label">Verified Credentials</span>
+      <h2 class="s-title">Certifications</h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card fi">
+        <div class="cert-ico aws"><i class="fab fa-aws"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">AWS Certified Cloud Practitioner</div>
+          <div class="cert-issuer">Amazon Web Services</div>
+          <div class="cert-date">March 2026</div>
+          <div class="cert-badge wip"><i class="fas fa-clock"></i> In Progress</div>
+        </div>
+      </div>
+      <div class="cert-card fi">
+        <div class="cert-ico aws"><i class="fab fa-aws"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">AWS Certified Solutions Architect &mdash; Associate</div>
+          <div class="cert-issuer">Amazon Web Services</div>
+          <div class="cert-date">November 2025</div>
+          <div class="cert-badge wip"><i class="fas fa-clock"></i> In Progress</div>
+        </div>
+      </div>
+      <div class="cert-card fi">
+        <div class="cert-ico azure"><i class="fab fa-microsoft"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">Azure Security Engineer Associate</div>
+          <div class="cert-issuer">Microsoft Azure</div>
+          <div class="cert-date">Issued: March 2025</div>
+          <div class="cert-badge done"><i class="fas fa-check-circle"></i> Certified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="bg-a">
+  <div class="s-inner">
+    <div class="s-head fi">
+      <span class="s-label">Milestones</span>
+      <h2 class="s-title">Achievements</h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card fi">
+        <div class="ach-ico"><i class="fas fa-puzzle-piece"></i></div>
+        <div class="ach-num" data-t="250">0<sup>+</sup></div>
+        <div class="ach-lbl">LeetCode Problems</div>
+        <div class="ach-sub">GFG &amp; Codechef too</div>
+      </div>
+      <div class="ach-card fi">
+        <div class="ach-ico"><i class="fas fa-trophy"></i></div>
+        <div class="ach-num" data-t="1005">0<sup>+</sup></div>
+        <div class="ach-lbl">Codechef Rating</div>
+        <div class="ach-sub">Div 4 &middot; June 2025</div>
+      </div>
+      <div class="ach-card fi">
+        <div class="ach-ico"><i class="fas fa-certificate"></i></div>
+        <div class="ach-num" data-t="3">0<sup>+</sup></div>
+        <div class="ach-lbl">Certifications</div>
+        <div class="ach-sub">AWS &amp; Azure</div>
+      </div>
+      <div class="ach-card fi">
+        <div class="ach-ico"><i class="fas fa-server"></i></div>
+        <div class="ach-num" data-t="2">0<sup>+</sup></div>
+        <div class="ach-lbl">Cloud Projects</div>
+        <div class="ach-sub">Production-ready IaC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-b">
+  <div class="s-inner">
+    <div class="s-head fi">
+      <span class="s-label">Get In Touch</span>
+      <h2 class="s-title">Contact</h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-intro fl">
+        <h3>Let's Build Something Together</h3>
+        <p>I'm actively looking for entry-level DevOps Engineer, Cloud Engineer, or SRE roles. If you have an opening or want to connect, reach out any time.</p>
+        <div class="c-items">
+          <a href="mailto:aa7909227@gmail.com" class="c-item">
+            <div class="c-ico"><i class="fas fa-envelope"></i></div>
+            <div><div class="c-lbl">Email</div><div class="c-val">aa7909227@gmail.com</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/ashish0491" target="_blank" class="c-item">
+            <div class="c-ico"><i class="fab fa-linkedin"></i></div>
+            <div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/ashish0491</div></div>
+          </a>
+          <a href="https://github.com/ashish0491" target="_blank" class="c-item">
+            <div class="c-ico"><i class="fab fa-github"></i></div>
+            <div><div class="c-lbl">GitHub</div><div class="c-val">github.com/ashish0491</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-side fr">
+        <div class="quick-links">
+          <a href="https://github.com/ashish0491" target="_blank" class="q-link">
+            <i class="fab fa-github"></i>
+            <div><div class="q-link-name">GitHub</div><div class="q-link-handle">@ashish0491</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/ashish0491" target="_blank" class="q-link">
+            <i class="fab fa-linkedin"></i>
+            <div><div class="q-link-name">LinkedIn</div><div class="q-link-handle">ashish0491</div></div>
+          </a>
+          <a href="mailto:aa7909227@gmail.com" class="q-link">
+            <i class="fas fa-envelope"></i>
+            <div><div class="q-link-name">Email</div><div class="q-link-handle">Gmail</div></div>
+          </a>
+          <a href="#hero" class="q-link">
+            <i class="fas fa-arrow-up"></i>
+            <div><div class="q-link-name">Back to top</div><div class="q-link-handle">Jump up</div></div>
+          </a>
+        </div>
+        <div class="open-box">
+          <div class="open-box-title">Open to Opportunities</div>
+          <div class="open-box-sub">DevOps &middot; Cloud &middot; SRE &middot; Infrastructure</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME MODAL -->
+<div id="resume-modal" role="dialog" aria-modal="true" aria-label="Resume Preview">
+  <div class="modal-toolbar">
+    <span class="modal-title">
+      <i class="fas fa-file-alt"></i> Ashish_Resume.pdf
+    </span>
+    <div class="modal-actions">
+      <a href="Ashish Resume.pdf" download="Ashish_Resume.pdf" class="modal-btn modal-btn-dl">
+        <i class="fas fa-download"></i> Download
+      </a>
+      <button class="modal-btn modal-btn-close" onclick="closeResume()">
+        <i class="fas fa-times"></i> Close
+      </button>
+    </div>
+  </div>
+  <div class="modal-frame-wrap">
+    <iframe id="resume-frame" src="" title="Ashish Resume"></iframe>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-text">Built by <span>Ashish</span> &mdash; DevOps Engineer</div>
+  <div class="foot-text">&copy; 2025</div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
